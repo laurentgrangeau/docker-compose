@@ -1,0 +1,5 @@
+zookeeper:
+  image: "jplock/zookeeper:3.4.5"
+  ports:
+    - Ã"2181:2181"
+  container_name: zookeeper
