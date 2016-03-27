@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  ethproxy:
+    image: "laurentgrangeau/eth-proxy:0.0.5"
+  ethminer:
+    image: "laurentgrangeau/ethminer:latest"
+    environment:
+      PROXY_IP: ethproxy
+      PROXY_PORT: 8080
+      RIG: compose
+    links:
+      - ethproxy
